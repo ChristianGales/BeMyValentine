@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Be my Valentine?</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <img src="assets/img/cute-bear.gif" alt="" class="gif" id="gif">
+      <h1 class="header">Will you be my Valentine?</h1>
+      <div class="buttons">
+        <a class="yes" id="yes" href="#">Yes</a>
+        <a class="no" id="no" href="#">No</a>
+      </div>
+      
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const yesButton = document.getElementById('yes');
+      const noButton = document.getElementById('no');
+      const gifImage = document.getElementById('gif');
+      const header = document.querySelector('.header');
+      const buttonTextArray = ['Are you really sure?', 'Plsssss!', 'Think Again'];
+  
+      noButton.addEventListener('click', function (event) {
+        event.preventDefault();
+
+        const currentSize = parseInt(getComputedStyle(yesButton).fontSize);
+        yesButton.style.fontSize = (currentSize + 10) + 'px';
+      
+        const randomTextIndex = Math.floor(Math.random() * buttonTextArray.length);
+        noButton.textContent = buttonTextArray[randomTextIndex];
+      });
+  
+      yesButton.addEventListener('click', function (event) {
+        event.preventDefault();
+  
+        gifImage.src = 'assets/img/bear-blow-a-kiss.gif';
+        header.textContent = 'Ayieee!!!';
+  
+        yesButton.style.display = 'none';
+        noButton.style.display = 'none';
+      });
+    });
+  </script>
+  
+</body>
+</html>

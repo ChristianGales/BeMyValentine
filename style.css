@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&display=swap');
+
+body {
+  font-family: 'Dancing Script', cursive;
+}
+
+.gif {
+  width: 50%; /* Adjusted for responsiveness */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f7f7f7;
+}
+
+.card {
+  text-align: center;
+  background-color: #fff;
+  width: 80%; /* Adjusted for responsiveness */
+  max-width: 500px; /* Added maximum width for larger screens */
+  margin: 50px;
+  padding: 30px;
+  box-shadow: 0px 0px 16px 1px rgba(168, 5, 5, 0.75);
+  -webkit-box-shadow: 0px 0px 16px 1px rgba(231, 62, 62, 0.75);
+  -moz-box-shadow: 0px 0px 16px 1px rgba(241, 59, 59, 0.75);
+  border-radius: 28px;
+}
+
+h1 {
+  margin-bottom: 40px;
+}
+
+.buttons a {
+  font-family: sans-serif;
+  height: 60px;
+  width: 60px;
+  border-radius: 8px;
+  padding: 15px;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+
+.yes {
+  background-color: rgb(204, 8, 8);
+}
+
+.yes:hover {
+  background-color: rgb(160, 5, 5);
+}
+
+.no {
+  background-color: rgb(32, 199, 41);
+}
+
+.no:hover {
+  background-color: rgb(8, 163, 15);
+}
+
+
+@media only screen and (max-width: 600px) {
+  .card {
+    width: 90%;
+  }
+
+  .buttons a {
+    height: 50px;
+    width: 50px;
+    font-size: 14px;
+  }
+}
